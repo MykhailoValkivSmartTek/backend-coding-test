@@ -1,0 +1,164 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Backend API",
+        "description": "API for backend code test"
+    },
+    "schemes": [
+        "https"
+    ],
+    "host": "localhost:8010",
+    "basePath": "/api",
+    "paths": {
+        "/health": {
+            "get": {
+                "summary": "Get health",
+                "description": "Returns health.",
+                "responses": {
+                    "200": {
+                        "description": "health",
+                        "schema": {
+                            "type": "string"                            
+                        }
+                    }
+                }
+            }
+        },
+        "/rides": {
+            "post": {
+                "summary": "Post ride",
+                "description": "Add new ride.",
+                "responses": {
+                    "200": {
+                        "description": "ride",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "rideID": {
+                                        "type": "number"
+                                    },
+                                    "startLat": {
+                                        "type": "number"
+                                    },
+                                    "startLong": {
+                                        "type": "number"
+                                    },
+                                    "endLat": {
+                                        "type": "number"
+                                    },
+                                    "endLong": {
+                                        "type": "number"
+                                    },
+                                    "riderName": {
+                                        "type": "string"
+                                    },
+                                    "driverName": {
+                                        "type": "string"
+                                    },
+                                    "driverVehicle": {
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "type": "string"
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        },
+        "/ride": {
+            "get": {
+                "summary": "Get rides",
+                "description": "Get rides.",
+                "responses": {
+                    "200": {
+                        "description": "rides",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "rideID": {
+                                        "type": "number"
+                                    },
+                                    "startLat": {
+                                        "type": "number"
+                                    },
+                                    "startLong": {
+                                        "type": "number"
+                                    },
+                                    "endLat": {
+                                        "type": "number"
+                                    },
+                                    "endLong": {
+                                        "type": "number"
+                                    },
+                                    "riderName": {
+                                        "type": "string"
+                                    },
+                                    "driverName": {
+                                        "type": "string"
+                                    },
+                                    "driverVehicle": {
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "type": "string"
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        },
+        "/rides/{id}": {
+            "get": {
+                "summary": "Get ride by id",
+                "description": "Get one ride.",
+                "responses": {
+                    "200": {
+                        "description": "ride",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "rideID": {
+                                        "type": "number"
+                                    },
+                                    "startLat": {
+                                        "type": "number"
+                                    },
+                                    "startLong": {
+                                        "type": "number"
+                                    },
+                                    "endLat": {
+                                        "type": "number"
+                                    },
+                                    "endLong": {
+                                        "type": "number"
+                                    },
+                                    "riderName": {
+                                        "type": "string"
+                                    },
+                                    "driverName": {
+                                        "type": "string"
+                                    },
+                                    "driverVehicle": {
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "type": "string"
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
